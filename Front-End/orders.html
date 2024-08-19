@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Management</h1>
+
+        <!-- Order List Form -->
+        <div id="order-list-form">
+            <h2>Create Order List</h2>
+            <input type="text" id="order-list-name" placeholder="Order List Name">
+            <textarea id="order-list-description" placeholder="Description"></textarea>
+            <button onclick="createOrderList()">Create Order List</button>
+        </div>
+
+        <!-- Orders Form -->
+        <div id="order-form">
+            <h2>Add Order</h2>
+            <select id="order-list-select"></select>
+            <input type="text" id="order-name" placeholder="Order Name">
+            <textarea id="order-description" placeholder="Order Description"></textarea>
+            <input type="number" id="order-price" placeholder="Price">
+            <button onclick="addOrder()">Add Order</button>
+        </div>
+
+        <!-- Display Order Lists -->
+        <div id="order-lists">
+            <h2>Order Lists</h2>
+            <ul id="order-list-container"></ul>
+        </div>
+    </div>
+
+    <script src="js/orders.js"></script>
+</body>
+</html>

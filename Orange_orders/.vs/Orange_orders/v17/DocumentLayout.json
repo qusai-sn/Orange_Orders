@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\controllers\\orderlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\controllers\\orderlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\models\\orderlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\models\\orderlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\models\\orangeorderscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\models\\orangeorderscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\models\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\models\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|c:\\users\\orange academy\\source\\repos\\orange_orders\\orange_orders\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EAB04112-1191-43F1-89C4-E119EE055391}|Orange_orders\\Orange_orders.csproj|solutionrelative:orange_orders\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\User.cs",
+              "RelativeToolTip": "Orange_orders\\Models\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T14:08:05.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderList.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\OrderList.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Models\\OrderList.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\OrderList.cs",
+              "RelativeToolTip": "Orange_orders\\Models\\OrderList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T12:44:30.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderListController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Controllers\\OrderListController.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Controllers\\OrderListController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Controllers\\OrderListController.cs",
+              "RelativeToolTip": "Orange_orders\\Controllers\\OrderListController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAADwv6oAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:31:39.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Orange_orders\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAUwCQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:19:42.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\ViewModels.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Models\\ViewModels.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\ViewModels.cs",
+              "RelativeToolTip": "Orange_orders\\Models\\ViewModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:18:56.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrangeOrdersContext.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\OrangeOrdersContext.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Models\\OrangeOrdersContext.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\OrangeOrdersContext.cs",
+              "RelativeToolTip": "Orange_orders\\Models\\OrangeOrdersContext.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAcwFgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:49:52.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Program.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Program.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Program.cs",
+              "RelativeToolTip": "Orange_orders\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:48:42.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Orange_orders\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\Models\\Order.cs",
+              "RelativeToolTip": "Orange_orders\\Models\\Order.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAwwAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T12:45:01.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Orange_orders\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Orange Academy\\source\\repos\\Orange_orders\\Orange_orders\\appsettings.Development.json",
+              "RelativeToolTip": "Orange_orders\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T09:44:54.683Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
