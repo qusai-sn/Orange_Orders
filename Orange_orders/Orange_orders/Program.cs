@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Orange_orders.Models;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<OrangeOrdersContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Add CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -23,6 +25,7 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader());
 });
 
+// Configure JSON serialization to handle reference loops
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
@@ -32,12 +35,13 @@ builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 
+// Enable CORS
 app.UseCors("AllowAllOrigins");
-
- 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

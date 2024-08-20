@@ -3,38 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .gradient-custom-2 {
+            background: #7e40f6;
+            background: -webkit-linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1));
+            background: linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1));
+        }
+        .mask-custom {
+            background: rgba(24, 24, 16, 0.2);
+            border-radius: 2em;
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+        }
+        .card-body {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .actions i {
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Order Management</h1>
 
-        <!-- Order List Form -->
-        <div id="order-list-form">
-            <h2>Create Order List</h2>
-            <input type="text" id="order-list-name" placeholder="Order List Name">
-            <textarea id="order-list-description" placeholder="Description"></textarea>
-            <button onclick="createOrderList()">Create Order List</button>
+<section class="vh-100 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-10">
+
+        <div class="card mask-custom">
+          <div class="card-body p-4 text-white">
+            <div class="text-center pt-3 pb-2">
+              <h2 class="my-4">Create Order List</h2>
+              <input type="text" id="order-list-name" class="form-control mb-2" placeholder="Order List Name">
+              <input type="text" id="order-list-description" class="form-control mb-3" placeholder="Description">
+              <button class="btn btn-primary btn-block" onclick="createOrderList()">Create Order List</button>
+            </div>
+          </div>
         </div>
 
-        <!-- Orders Form -->
-        <div id="order-form">
-            <h2>Add Order</h2>
-            <select id="order-list-select"></select>
-            <input type="text" id="order-name" placeholder="Order Name">
-            <textarea id="order-description" placeholder="Order Description"></textarea>
-            <input type="number" id="order-price" placeholder="Price">
-            <button onclick="addOrder()">Add Order</button>
-        </div>
-
-        <!-- Display Order Lists -->
-        <div id="order-lists">
-            <h2>Order Lists</h2>
-            <ul id="order-list-container"></ul>
-        </div>
+        <div id="order-list-container"></div>
+        
+      </div>
     </div>
+  </div>
+</section>
 
-    <script src="js/orders.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="js/orders.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

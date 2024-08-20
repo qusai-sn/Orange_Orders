@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Orange_orders.Models; // Adjust the namespace as needed
+using Orange_orders.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
@@ -10,49 +11,60 @@ using System;
 public class OrderListsController : ControllerBase
 {
     private readonly OrangeOrdersContext _context;
+    private readonly IMapper _mapper;
 
-    public OrderListsController(OrangeOrdersContext context)
+    public OrderListsController(OrangeOrdersContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     // Retrieve all OrderLists
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<OrderList>>> GetOrderLists()
+    public async Task<ActionResult<IEnumerable<OrderListDTO>>> GetOrderLists()
     {
         var orderLists = await _context.OrderLists
-                                       .Include(ol => ol.Orders)
-                                       .ToListAsync();
+            .Include(ol => ol.Orders)
+                .ThenInclude(o => o.User)
+            .Include(ol => ol.CreatedByUser)
+            .ToListAsync();
 
-        return Ok(orderLists);
+        // Use AutoMapper to convert entities to DTOs
+        var orderListDTOs = _mapper.Map<List<OrderListDTO>>(orderLists);
+
+        return Ok(orderListDTOs);
     }
 
     // Retrieve a specific OrderList by ID
     [HttpGet("{id}")]
-    public async Task<ActionResult<OrderList>> GetOrderList(int id)
+    public async Task<ActionResult<OrderListDTO>> GetOrderList(int id)
     {
         var orderList = await _context.OrderLists
-                                      .Include(ol => ol.Orders)
-                                      .FirstOrDefaultAsync(ol => ol.OrderListId == id);
+            .Include(ol => ol.Orders)
+                .ThenInclude(o => o.User)
+            .Include(ol => ol.CreatedByUser)
+            .FirstOrDefaultAsync(ol => ol.OrderListId == id);
 
         if (orderList == null)
         {
             return NotFound();
         }
 
-        return orderList;
+        // Use AutoMapper to convert the entity to DTO
+        var orderListDTO = _mapper.Map<OrderListDTO>(orderList);
+
+        return Ok(orderListDTO);
     }
 
     // Add a new OrderList
     [HttpPost]
-    public async Task<ActionResult<OrderList>> AddOrderList([FromBody] OrderList orderList)
+    public async Task<ActionResult<OrderListDTO>> AddOrderList([FromBody] OrderListDTO orderListDto)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var user = await _context.Users.FindAsync(orderList.CreatedByUserId);
-        if (user == null)
-            return BadRequest("Invalid CreatedByUserId.");
+        // Use AutoMapper to convert DTO to entity
+        var orderList = _mapper.Map<OrderList>(orderListDto);
 
         orderList.CreatedAt = DateTime.Now;
         orderList.UpdatedAt = DateTime.Now;
@@ -60,7 +72,10 @@ public class OrderListsController : ControllerBase
         _context.OrderLists.Add(orderList);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetOrderList), new { id = orderList.OrderListId }, orderList);
+        // Map back to DTO after saving
+        var createdOrderListDto = _mapper.Map<OrderListDTO>(orderList);
+
+        return CreatedAtAction(nameof(GetOrderList), new { id = orderList.OrderListId }, createdOrderListDto);
     }
 
     // Delete an OrderList by ID
@@ -79,15 +94,14 @@ public class OrderListsController : ControllerBase
 
     // Add an Order to an existing OrderList
     [HttpPost("{orderListId}/orders")]
-    public async Task<ActionResult<Order>> AddOrderToList(int orderListId, [FromBody] Order order)
+    public async Task<ActionResult<OrderDTO>> AddOrderToList(int orderListId, [FromBody] OrderDTO orderDto)
     {
         var orderList = await _context.OrderLists.FindAsync(orderListId);
         if (orderList == null)
             return NotFound("Order list not found.");
 
-        var user = await _context.Users.FindAsync(order.UserId);
-        if (user == null)
-            return BadRequest("Invalid UserId.");
+        // Use AutoMapper to convert DTO to entity
+        var order = _mapper.Map<Order>(orderDto);
 
         order.CreatedAt = DateTime.Now;
         order.UpdatedAt = DateTime.Now;
@@ -95,7 +109,10 @@ public class OrderListsController : ControllerBase
 
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetOrder), new { orderListId, orderId = order.OrderId }, order);
+        // Map back to DTO after saving
+        var createdOrderDto = _mapper.Map<OrderDTO>(order);
+
+        return CreatedAtAction(nameof(GetOrder), new { orderListId, orderId = order.OrderId }, createdOrderDto);
     }
 
     // Delete an Order from an OrderList
@@ -121,7 +138,7 @@ public class OrderListsController : ControllerBase
 
     // Update an Order in an OrderList
     [HttpPut("{orderListId}/orders/{orderId}")]
-    public async Task<IActionResult> UpdateOrder(int orderListId, int orderId, [FromBody] Order updatedOrder)
+    public async Task<IActionResult> UpdateOrder(int orderListId, int orderId, [FromBody] OrderDTO updatedOrderDto)
     {
         var orderList = await _context.OrderLists
                                       .Include(ol => ol.Orders)
@@ -134,15 +151,9 @@ public class OrderListsController : ControllerBase
         if (order == null)
             return NotFound("Order not found.");
 
-        var user = await _context.Users.FindAsync(updatedOrder.UserId);
-        if (user == null)
-            return BadRequest("Invalid UserId.");
+        // Use AutoMapper to update the entity with values from DTO
+        _mapper.Map(updatedOrderDto, order);
 
-        // Update order properties
-        order.OrderName = updatedOrder.OrderName;
-        order.Description = updatedOrder.Description;
-        order.Price = updatedOrder.Price;
-        order.IsPaid = updatedOrder.IsPaid;
         order.UpdatedAt = DateTime.Now;
 
         await _context.SaveChangesAsync();
@@ -152,7 +163,7 @@ public class OrderListsController : ControllerBase
 
     // Retrieve a specific Order from an OrderList by ID
     [HttpGet("{orderListId}/orders/{orderId}")]
-    public async Task<ActionResult<Order>> GetOrder(int orderListId, int orderId)
+    public async Task<ActionResult<OrderDTO>> GetOrder(int orderListId, int orderId)
     {
         var orderList = await _context.OrderLists
                                       .Include(ol => ol.Orders)
@@ -165,6 +176,9 @@ public class OrderListsController : ControllerBase
         if (order == null)
             return NotFound("Order not found.");
 
-        return order;
+        // Use AutoMapper to convert the entity to DTO
+        var orderDto = _mapper.Map<OrderDTO>(order);
+
+        return Ok(orderDto);
     }
 }
